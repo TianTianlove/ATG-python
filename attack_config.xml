@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<elements name="attack">
+	<attack type ="DoS">
+		<start_time>2</start_time>
+		<end_time>4</end_time>
+	</attack>
+
+	<attack type ="Fuzzing">
+		<start_time>5</start_time>
+		<end_time>6</end_time>
+		<message type ="random">
+			<id_range>20-53</id_range>
+		</message>
+	</attack>
+
+	<attack type ="Fuzzing">
+		<start_time>7</start_time>
+		<end_time>8</end_time>
+		<message type ="fixed">
+			<id>20</id>
+			<data>01 12 21 31 00 12 33 12</data>
+			<period>20</period>
+		</message>
+	</attack>
+
+	<attack type ="Spoofing">
+		<start_time>8</start_time>
+		<end_time>40</end_time>
+		<message type ="fixed">
+			<target_id>318</target_id>
+			<data>01 12 21 31 00 12 33 12</data>
+			<activebit>F0</activebit>
+			<frequency>89</frequency>
+		</message>
+	</attack>
+
+	<attack type ="Spoofing">
+		<start_time>60</start_time>
+		<end_time>70</end_time>
+		<message type ="offset">
+			<target_id>318</target_id>
+			<data>13 14 02 01 21 23 21 11</data>
+			<active_byte>AA</active_byte>
+			<frequency>21</frequency>
+		</message>
+	</attack>
+
+	<attack type ="Spoofing">
+		<start_time>80</start_time>
+		<end_time>110</end_time>
+		<message type ="offset">
+			<target_id>150</target_id>
+			<data>00 00 00 00 21 23 21 11</data>
+			<active_byte>0F</active_byte>
+			<frequency>21</frequency>
+		</message>
+	</attack>
+
+	<attack type ="Fuzzing">
+		<start_time>130</start_time>
+		<end_time>150</end_time>
+		<message type ="random">
+			<id_range>20-53</id_range>
+		</message>
+	</attack>
+
+</elements>
