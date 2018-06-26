@@ -1,7 +1,7 @@
 # ATG-python
 Attack Traffic Generation(ATG) tool enables users to explore automotive CAN bus cyber-security rapidly.
 ## 1 Getting Started
-ATG is a vehicle CAN bus packet analyzer and attack packets generator. ATG enable researchers to begin to explore automotive cyber-physical system rapidly. To a certain extent, it can verify the cyber security solution of in-vehicle CAN bus and ECUs with different attack modes. For some novel IDS countermeasures, it is also a good tool to generate a dataset, and test it in python environment.
+ATG is a vehicle CAN bus packet analyzer and attack packets generator. ATG enables researchers to begin to explore automotive cyber-physical system rapidly. To a certain extent, it can verify the cyber security solution of in-vehicle CAN bus and ECUs with different attack modes. For some novel IDS countermeasures, it is also a good tool to generate a dataset, and test it in python environment.
 ### 1.1 Current Version 
 This specification is based on ATG version Beta (released 15 Nov. 2017), running on Windows XP, Vista, 7, 8, 10 (64 and 32).
 ### 1.2 CAN Interface
@@ -95,8 +95,9 @@ It is an open source project on GitHub. You can get more information on the webs
 ATG only call it and make it easy to use in window interface. With this tool, you can convert a can matrix file to an XML file which can be easy to load in an embedded IDS (Intrusion Detection System) as the detection rules.
 ### 2.5 Dataset Format Convert
 A Database file is not a general format of the dataset, so you can use this tool to convert the database file to a .CSV (Comma-Separated Values) file. You can share this file with other researchers in more general ways.
-## 3 About more
-1)	ATG based on python which is the popular language in analysis and AI research field. If you want to develop an IDS system by machine learning method, ATG is the best way to achieve your goal. 
+## 3 Note
+1)	ATG is developed using python which is the popular language in analysis and AI research field. If you want to develop an IDS system by machine learning method, ATG is the best way to achieve your goal. 
 2)	For the CAN bus interface, USB2CAN is the only available interface in the beta version. To improve the performance, in the later version we will support more interfaces such as Kvaser, PCAN and so on.
+3)      This open project will be published in [AReS’18](https://www.ares-conference.eu/accepted-papers/).
 
 
