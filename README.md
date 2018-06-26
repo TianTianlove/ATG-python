@@ -96,8 +96,8 @@ ATG only call it and make it easy to use in window interface. With this tool, yo
 ### 2.5 Dataset Format Convert
 A Database file is not a general format of the dataset, so you can use this tool to convert the database file to a .CSV (Comma-Separated Values) file. You can share this file with other researchers in more general ways.
 ## 3 Note
-1)	ATG is developed using python which is the popular language in analysis and AI research field. If you want to develop an IDS system by machine learning method, ATG is the best way to achieve your goal. 
-2)	For the CAN bus interface, USB2CAN is the only available interface in the beta version. To improve the performance, in the later version we will support more interfaces such as Kvaser, PCAN and so on.
-3)      This open project will be published in [AReS’18](https://www.ares-conference.eu/accepted-papers/).
+<br>(1) ATG is developed using python which is the popular language in analysis and AI research field. If you want to develop an IDS system by machine learning method, ATG is the best way to achieve your goal. 
+<br>(2) For the CAN bus interface, USB2CAN is the only available interface in the beta version. To improve the performance, in the later version we will support more interfaces such as Kvaser, PCAN and so on.
+<br>(3)This open project will be published in [AReS’18](https://www.ares-conference.eu/accepted-papers/).
 
 
