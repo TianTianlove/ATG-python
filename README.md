@@ -3,7 +3,7 @@ Attack Traffic Generation(ATG) tool enables users to explore automotive CAN bus 
 ## 1 Getting Started
 ATG is a vehicle CAN bus packet analyzer and attack packets generator. ATG enables researchers to begin to explore automotive cyber-physical system rapidly. To a certain extent, it can verify the cyber security solution of in-vehicle CAN bus and ECUs with different attack modes. For some novel IDS countermeasures, it is also a good tool to generate a dataset, and test it in python environment.
 ### 1.1 Current Version 
-This specification is based on ATG version Beta (released 15 Nov. 2017), running on Windows XP, Vista, 7, 8, 10 (64 and 32).
+This specification is based on the beta version, running on Windows XP, Vista, 7, 8, 10 (64 and 32).
 ### 1.2 CAN Interface
 USB2CAN is the default CAN bus interface of ATG. It provides drivers for Windows and Linux system. Meanwhile, for the developer, it provides DLL (Dynamic Link Library) for windows application and Socket CAN drivers for Linux application.
 You can buy this device from 8device website: http://www.8devices.com/products/usb2can The price is only $65.
@@ -26,8 +26,8 @@ You can click the checked box △t to switch the time type between interval and 
 #### 2.2.3 Packets Logging
 To make it possible and easy to analyze the entire packets after you get these from a real vehicle, ATG supports two kinds of logging file formats, database file(.db) and log file(.log). You can check Save as DB or Save as log checkbox and select the storage path. This can show and store packets at the same time after you click Start Tracking button. When you complete logging, you can open log file in Notepad and database file in database view software, such as SQLite Expert Personal 3. Another difference between these two formats is that only the log format file can label the attack packets when you launch attacks and playback.
 Comparing to other software logging feature the advantages of ATG are:  
-1)	Candump module of can-utils  (https://github.com/linux-can/can-utils) just can logging data, it cannot generate attack packets and label them.
-2)	CANoe  store packets as *.blf/*.asc/*.mf4 binary format file. You cannot analysis directly, and the Adaptive CAN interface is expensive.
+<br>(1) Candump module of [can-utils](https://github.com/linux-can/can-utils) just can logging data, it cannot generate attack packets and label them.
+<br>(2) CANoe  store packets as *.blf/*.asc/*.mf4 binary format file. You cannot analysis directly, and the Adaptive CAN interface is expensive.
 ATG not only guarantee the performance to store a huge number of packets but also make it easy to modify and analyze the dataset. 
 ### 2.2 Playback
 Playback function can help you to replay the log file. After you select the log file, you can click Play button to launch the data into CAN bus. You can also pause or stop it.
@@ -39,11 +39,11 @@ In the Fuzzing attack mode, ATG can inject the random ID and random data.
 #### 2.3.3 Spoofing attack
 After sniffing and marking the control field in a control frame, it is easy to use a reverse engineering. ATG can inject the malicious message in a shorter interval than the normal nodes, which causes the receiving node to execute a dangerous operation.
 The step to launch fuzzing attack is as follows.
-1)	Analyzing the packets
+<br>(1) Analyzing the packets
 In the Attack Tab, you can click Analyze button to get and classify the packets. For example, in the following figure, you can see there are two kinds of packets 386(0x182) ID and 291(0x123) ID, TS is the interval, IF is a flag to judge whether this packet is cyclic, 5 means it is.
-2)	Selecting target packet and Configuring parameters
+<br>(2) Selecting target packet and Configuring parameters
 You can select the target message in the analysis result box. And then you can configure the appointed byte of attack packet. Shown as following, you can input 30, 31 and 21 in the first, second and fourth input box, and check the checkbox under them. The default mode is Fixed Data, under this mode, it just replaces the selected byte of original data to a preset value. Under the Data Offset mode, it adds the value to the original data. You can also change the frequency of attack by the slider to make the injected messages difficult to find. 
-3)	Launching attack
+<br>(3)Launching attack
 You can check the Spoofing Attack Radio button and click Start button to launch such attack. In the following picture, I use another software to check the attack messages. 
 #### 2.3.4 Automatic attack
 Usually, it is not convenient to manually launch an attack event by previous way. So ATG provides attack config function. You can define the attack events in an XML file. ATG can load it and trigger them one by one.
