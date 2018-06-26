@@ -47,9 +47,9 @@ You can select the target message in the analysis result box. And then you can c
 You can check the Spoofing Attack Radio button and click Start button to launch such attack. In the following picture, I use another software to check the attack messages. 
 #### 2.3.4 Automatic attack
 Usually, it is not convenient to manually launch an attack event by previous way. So ATG provides attack config function. You can define the attack events in an XML file. ATG can load it and trigger them one by one.
-The config format is similar to the attack config above:
-1)	DoS attack 
-Sample:
+<br>The config format is similar to the attack config above:
+<br>(1) DoS attack
+<br>Sample:
 ```XML
 	<attack type ="DoS">
 		<start_time>2</start_time>
@@ -57,8 +57,8 @@ Sample:
 	</attack>
 ```
 In the attack node, define the type attribute as “DoS”, then set the start time and end time (s).
-2)	Fuzzing attack
-Sample:
+<br>(2)Fuzzing attack
+<br>Sample:
 ```XML
 	<attack type ="Fuzzing">
 		<start_time>60</start_time>
@@ -70,9 +70,9 @@ Sample:
 		</message>
 	</attack>
 ```
-In the attack node, Define the type attribute as “Fuzzing”, then set the start time and end time. In the message node, the type attribute can be configured as “random” or “fixed”. Random mode denotes the ID and Data are randomly generated; fixed mode means the relevant bytes would be randomly generated then define the target_id . active_byte and frequency.
-3)	Spoofing attack
-Sample:
+In the attack node, Define the type attribute as “Fuzzing”, then set the start time and end time. In the message node, the type attribute can be configured as “random” or “fixed”. Random mode denotes the ID and Data are randomly generated; fixed mode means the relevant bytes would be randomly generated then define the target_id. active_byte and frequency.
+<br>(3)Spoofing attack
+<br>Sample:
 ```XML
 	<attack type ="Spoofing">
 		<start_time>80</start_time>
